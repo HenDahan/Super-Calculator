@@ -3,13 +3,13 @@ package UI;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-public class Fibonacci_Series_Frame {
+public class Prime_Factorization {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -21,7 +21,7 @@ public class Fibonacci_Series_Frame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Fibonacci_Series_Frame window = new Fibonacci_Series_Frame();
+					Prime_Factorization window = new Prime_Factorization();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,7 +33,7 @@ public class Fibonacci_Series_Frame {
 	/**
 	 * Create the application.
 	 */
-	public Fibonacci_Series_Frame() {
+	public Prime_Factorization() {
 		initialize();
 	}
 
@@ -42,25 +42,24 @@ public class Fibonacci_Series_Frame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 660, 300);
+		frame.setBounds(100, 100, 450, 206);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JLabel lblEnetr = new JLabel("Insert the organ you want to find from the Fibonacci sequence:");
-		lblEnetr.setBounds(12, 25, 488, 37);
-		panel.add(lblEnetr);
+		JLabel lblEnterANumber = new JLabel("Enter a number");
+		lblEnterANumber.setBounds(48, 29, 116, 47);
+		panel.add(lblEnterANumber);
 		
 		textField = new JTextField();
-		textField.setBounds(472, 25, 133, 37);
+		textField.setBounds(166, 36, 177, 33);
 		panel.add(textField);
 		textField.setColumns(10);
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setBounds(36, 97, 569, 58);
+		textPane.setBounds(12, 85, 416, 59);
 		panel.add(textPane);
 	}
-
 }
