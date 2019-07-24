@@ -6,17 +6,17 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
-import javax.swing.JTextField;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class Function_Calculator_Frame {
 
 	private JFrame frame;
-	private JTextField textField;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void Function_Frame() {
+	public void Function_Frame() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -41,7 +41,7 @@ public class Function_Calculator_Frame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 500, 440);
+		frame.setBounds(100, 100, 600, 185);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -49,18 +49,16 @@ public class Function_Calculator_Frame {
 		panel.setLayout(null);
 		
 		JButton btnAxbxc = new JButton("aX^2+bX+c=0");
-		btnAxbxc.setBounds(150, 5, 135, 40);
+		btnAxbxc.setBounds(233, 15, 135, 40);
 		panel.add(btnAxbxc);
 		
 		JButton btnAxbxcxd = new JButton("aX^3+bX^2+cX+d=0");
-		btnAxbxcxd.setBounds(300, 5, 180, 40);
+		btnAxbxcxd.setBounds(390, 15, 180, 40);
 		panel.add(btnAxbxcxd);
 		
-		textField = new JTextField();
-		textField.setBounds(5, 15, 137, 20);
-		textField.setText("Select Function Type:");
-		panel.add(textField);
-		textField.setColumns(10);
+		JLabel lblSelectFunctionType = new JLabel("Select Function Type:");
+		lblSelectFunctionType.setFont(new Font("Dialog", Font.BOLD, 14));
+		lblSelectFunctionType.setBounds(24, 0, 186, 63);
+		panel.add(lblSelectFunctionType);
 	}
-
 }

@@ -20,7 +20,7 @@ public class Advanced_Calc_Frame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void Advanced_Frame() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

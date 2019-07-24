@@ -17,7 +17,7 @@ public class Basic_Calc_Frame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void Basic_Frame() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

@@ -17,7 +17,7 @@ public class Prime_Factorization {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void Prime_Frame() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
