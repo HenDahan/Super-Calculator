@@ -5,15 +5,25 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import java.awt.GridLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Window.Type;
 import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.awt.event.ActionEvent;
+import java.awt.Frame;
 
 public class Main_Frame {
 
 	private JFrame frame;
+	private JTextField txtSuperCalculator;
 
 	/**
 	 * Launch the application.
@@ -50,35 +60,24 @@ public class Main_Frame {
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
+		txtSuperCalculator = new JTextField();
+		txtSuperCalculator.setText("Super Calculator - The Most Amazing Calculator In the World");
+		txtSuperCalculator.setFont(new Font("NanumMyeongjo", Font.BOLD, 14));
+		txtSuperCalculator.setBounds(10, 10, 445, 20);
+		panel.add(txtSuperCalculator);
+		txtSuperCalculator.setColumns(10);
+		
 		JButton btnBasicCalculator = new JButton("Basic Calculator");
-		btnBasicCalculator.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				Basic_Calc_Frame base_frame = new Basic_Calc_Frame();
-				base_frame.Basic_Frame();
-			}
-		});
 		btnBasicCalculator.setFont(new Font("NanumMyeongjo", Font.BOLD, 16));
 		btnBasicCalculator.setBounds(10, 50, 200, 50);
 		panel.add(btnBasicCalculator);
 		
 		JButton btnAdvancedCalculator = new JButton("Advanced Calculator");
-		btnAdvancedCalculator.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			Advanced_Calc_Frame ad_calc = new Advanced_Calc_Frame();
-			ad_calc.Advanced_Frame();
-			}
-		});
 		btnAdvancedCalculator.setFont(new Font("NanumMyeongjo", Font.BOLD, 16));
 		btnAdvancedCalculator.setBounds(10, 110, 200, 50);
 		panel.add(btnAdvancedCalculator);
 		
 		JButton btnBaseCalculator = new JButton("Base Calculator");
-		btnBaseCalculator.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				//Base_Calc_Frame base_frame = new Base_Calc_Frame();
-				//base_frame.Base_Frame();
-		}
-		});
 		btnBaseCalculator.setFont(new Font("NanumMyeongjo", Font.BOLD, 16));
 		btnBaseCalculator.setBounds(10, 170, 200, 50);
 		panel.add(btnBaseCalculator);
@@ -109,12 +108,6 @@ public class Main_Frame {
 		panel.add(btnFibonacciSeries);
 		
 		JButton btnPrimeFactorization = new JButton("Prime Factorization");
-		btnPrimeFactorization.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			Prime_Factorization prime_frame = new Prime_Factorization();
-			prime_frame.Prime_Frame();
-			}
-		});
 		btnPrimeFactorization.setFont(new Font("NanumMyeongjo", Font.BOLD, 16));
 		btnPrimeFactorization.setBounds(10, 350, 200, 50);
 		panel.add(btnPrimeFactorization);
@@ -139,10 +132,6 @@ public class Main_Frame {
 				+ "\nprimes factorization of a given number.");
 		txtrMenu.setBounds(230, 50, 250, 350);
 		panel.add(txtrMenu);
-		
-		JLabel lblSuperCalculator = new JLabel("Super Calculator - The Most Amazing Calculator In the World");
-		lblSuperCalculator.setBounds(10, 10, 455, 25);
-		panel.add(lblSuperCalculator);
 		
 
 		

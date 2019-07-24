@@ -6,12 +6,17 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
-import javax.swing.JLabel;
-import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
 
 public class Function_Calculator_Frame {
 
 	private JFrame frame;
+	private JTextField textField;
+	private JTextField aPrint;
+	private JTextField bPrint;
+	private JTextField cPrint;
+	private JTextField dPrint;
 
 	/**
 	 * Launch the application.
@@ -41,7 +46,7 @@ public class Function_Calculator_Frame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 600, 185);
+		frame.setBounds(100, 100, 500, 440);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -49,16 +54,53 @@ public class Function_Calculator_Frame {
 		panel.setLayout(null);
 		
 		JButton btnAxbxc = new JButton("aX^2+bX+c=0");
-		btnAxbxc.setBounds(233, 15, 135, 40);
+		btnAxbxc.setBounds(150, 5, 135, 40);
 		panel.add(btnAxbxc);
 		
 		JButton btnAxbxcxd = new JButton("aX^3+bX^2+cX+d=0");
-		btnAxbxcxd.setBounds(390, 15, 180, 40);
+		btnAxbxcxd.setBounds(300, 5, 180, 40);
 		panel.add(btnAxbxcxd);
 		
-		JLabel lblSelectFunctionType = new JLabel("Select Function Type:");
-		lblSelectFunctionType.setFont(new Font("Dialog", Font.BOLD, 14));
-		lblSelectFunctionType.setBounds(24, 0, 186, 63);
-		panel.add(lblSelectFunctionType);
+		textField = new JTextField();
+		textField.setBounds(5, 15, 137, 20);
+		textField.setText("Select Function Type:");
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		aPrint = new JTextField();
+		aPrint.setBounds(12, 85, 29, 19);
+		panel.add(aPrint);
+		aPrint.setColumns(10);
+		
+		JTextPane aText = new JTextPane();
+		aText.setBounds(53, 73, 6, 21);
+		panel.add(aText);
+		
+		bPrint = new JTextField();
+		bPrint.setColumns(10);
+		bPrint.setBounds(94, 85, 29, 19);
+		panel.add(bPrint);
+		
+		JTextPane bText = new JTextPane();
+		bText.setBounds(135, 83, 6, 21);
+		panel.add(bText);
+		
+		cPrint = new JTextField();
+		cPrint.setColumns(10);
+		cPrint.setBounds(167, 85, 29, 19);
+		panel.add(cPrint);
+		
+		JTextPane cText = new JTextPane();
+		cText.setBounds(218, 73, 6, 21);
+		panel.add(cText);
+		
+		dPrint = new JTextField();
+		dPrint.setColumns(10);
+		dPrint.setBounds(250, 75, 29, 19);
+		panel.add(dPrint);
+		
+		JTextPane dText = new JTextPane();
+		dText.setBounds(304, 73, 6, 21);
+		panel.add(dText);
 	}
 }
