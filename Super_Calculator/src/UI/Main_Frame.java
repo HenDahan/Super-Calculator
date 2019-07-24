@@ -55,6 +55,7 @@ public class Main_Frame {
 			public void actionPerformed(ActionEvent arg0) {
 				Basic_Calc_Frame base_frame = new Basic_Calc_Frame();
 				base_frame.Basic_Frame();
+				
 			}
 		});
 		btnBasicCalculator.setFont(new Font("NanumMyeongjo", Font.BOLD, 16));
@@ -75,9 +76,9 @@ public class Main_Frame {
 		JButton btnBaseCalculator = new JButton("Base Calculator");
 		btnBaseCalculator.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//Base_Calc_Frame base_frame = new Base_Calc_Frame();
-				//base_frame.Base_Frame();
-		}
+				
+				Base_Calculator_Frame.Base_Frame();
+			}
 		});
 		btnBaseCalculator.setFont(new Font("NanumMyeongjo", Font.BOLD, 16));
 		btnBaseCalculator.setBounds(10, 170, 200, 50);
@@ -98,8 +99,7 @@ public class Main_Frame {
 		JButton btnFibonacciSeries = new JButton("Fibonacci Series");
 		btnFibonacciSeries.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Fibonacci_Series_Frame fib_frame = new Fibonacci_Series_Frame();
-				fib_frame.Fib_Frame();
+				Fibonacci_Series_Frame.Fib_Frame();
 				//close();
 				
 			}
@@ -111,8 +111,7 @@ public class Main_Frame {
 		JButton btnPrimeFactorization = new JButton("Prime Factorization");
 		btnPrimeFactorization.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-			Prime_Factorization prime_frame = new Prime_Factorization();
-			prime_frame.Prime_Frame();
+			Prime_Factorization.Prime_Frame();
 			}
 		});
 		btnPrimeFactorization.setFont(new Font("NanumMyeongjo", Font.BOLD, 16));

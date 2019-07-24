@@ -9,15 +9,21 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-public class Prime_Factorization {
+import Utility.PrimeFactorization;
 
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Prime_Factorization {
+	
 	private JFrame frame;
-	private JTextField textField;
+	private JTextField textInput;
 
 	/**
 	 * Launch the application.
 	 */
-	public void Prime_Frame() {
+	public static void Prime_Frame() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -43,23 +49,47 @@ public class Prime_Factorization {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 206);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JLabel lblEnterANumber = new JLabel("Enter a number");
-		lblEnterANumber.setBounds(48, 29, 116, 47);
+		JLabel lblEnterANumber = new JLabel("Enter a number to Prime Factor:");
+		lblEnterANumber.setBounds(10, 20, 230, 30);
 		panel.add(lblEnterANumber);
 		
-		textField = new JTextField();
-		textField.setBounds(166, 36, 177, 33);
-		panel.add(textField);
-		textField.setColumns(10);
+		textInput = new JTextField();
+		textInput.setBounds(260, 20, 120, 30);
+		panel.add(textInput);
+		textInput.setColumns(10);
 		
-		JTextPane textPane = new JTextPane();
-		textPane.setBounds(12, 85, 416, 59);
-		panel.add(textPane);
+		JTextPane textOutput = new JTextPane();
+		textOutput.setBounds(160, 130, 270, 30);
+		panel.add(textOutput);
+		
+		JLabel label = new JLabel("The Factorization is:");
+		label.setBounds(10, 130, 150, 30);
+		panel.add(label);
+		
+		JButton btnCalculate = new JButton("Calculate");
+		btnCalculate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int num = Integer.parseInt(textInput.getText());
+				int[] list = PrimeFactorization.findPrimeFactor(num);
+				StringBuffer output = new StringBuffer();
+				for (int i=0;i < list.length;i++) {
+					if (list[i] != 0) {
+						output.append(list[i]+", ");
+					}
+					
+				}
+				output.deleteCharAt(output.length()-2);
+				textOutput.setText(output.toString());
+				
+			}
+		});
+		btnCalculate.setBounds(260, 70, 120, 25);
+		panel.add(btnCalculate);
 	}
 }
