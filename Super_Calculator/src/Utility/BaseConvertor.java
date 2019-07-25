@@ -45,7 +45,7 @@ public class BaseConvertor {
 		else if (N == 2) {
 			answer = getBinaryFromOctalNumber(num);
 		}
-		else if (N == 8) {
+		else if (N == 10) {
 			answer = String.valueOf(getDecimalFromOctalNumber(num));
 		}
 		else {
