@@ -75,7 +75,6 @@ public class Fibonacci_Series_Frame {
 				fib = new Fibonacci();
 				int output = fib.fibonacci_Sequence(num);
 				textOutput.setText(""+output);
-				
 			}
 		});
 		btnCalculate.setBounds(470, 80, 120, 40);

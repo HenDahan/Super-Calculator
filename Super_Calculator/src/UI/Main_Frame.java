@@ -1,4 +1,12 @@
 package UI;
+/*
+import UI.Basic_Calc_Frame;
+import UI.Base_Calculator_Frame;
+import UI.Advanced_Calc_Frame;
+import UI.Fibonacci_Series_Frame;
+import UI.Function_Calculator_Frame;
+import UI.Prime_Factorization;*/
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
