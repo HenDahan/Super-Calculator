@@ -1,4 +1,4 @@
-package Calculator;
+package Utility;
 
 public class Basic_Calculator {
 	
