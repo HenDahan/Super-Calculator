@@ -12,6 +12,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
+import java.awt.Color;
+
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -53,10 +55,12 @@ public class Main_Frame {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 500, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Super Calculator Made By: Kfir Rahamim and Hen Dahan");
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
+		panel.setBackground(Color.orange);
 		
 		JButton btnBasicCalculator = new JButton("Basic Calculator");
 		btnBasicCalculator.addActionListener(new ActionListener() {
@@ -128,22 +132,22 @@ public class Main_Frame {
 		
 		
 		JTextArea txtrMenu = new JTextArea();
-		txtrMenu.setText("Basic calculator - you can use the"
-				+ "\nbasic operators \"+\", \"-\", \"*\" and \"/\"."
-				+ "\n\n\nAdvanced Calculator - you can use the"
-				+ "\nadvanced operators \"power\", \"root\","
-				+ "\n\"factorial\", \"e\" and \"Pi\"."
-				+ "\n\nBase calculator - converting a number"
-				+ "\nto different bases such as Base2,"
-				+ "\nBase4,Base 8, Base10 and Base16."
-				+ "\n\nFunction Calculator - solve a function"
-				+ "\nof up to X^3, Min/Max & intersection"
-				+ "\npoints, Limit Calculations."
-				+ "\n\nFibonacci Series - gives you the"
-				+ "\nvalue of the N's index in"
-				+ "\nfibonacci series."
-				+ "\n\nPrime Factorization - gives you the"
-				+ "\nprimes factorization of a given number.");
+		txtrMenu.setText(" Basic calculator - you can use the"
+				+ "\n basic operators \"+\", \"-\", \"*\" and \"/\"."
+				+ "\n\n\n Advanced Calculator - you can use the"
+				+ "\n advanced operators \"power\", \"root\","
+				+ "\n \"factorial\", \"e\" and \"Pi\"."
+				+ "\n\n Base calculator - converting a number"
+				+ "\n to different bases such as Base2,"
+				+ "\n Base4,Base 8, Base10 and Base16."
+				+ "\n\n Function Calculator - solve a function"
+				+ "\n of up to X^3, Min/Max & intersection"
+				+ "\n points, Limit Calculations."
+				+ "\n\n Fibonacci Series - gives you the"
+				+ "\n value of the N's index in"
+				+ "\n fibonacci series."
+				+ "\n\n Prime Factorization - gives you the"
+				+ "\n primes factorization of a given number.");
 		txtrMenu.setBounds(230, 50, 250, 350);
 		panel.add(txtrMenu);
 		
