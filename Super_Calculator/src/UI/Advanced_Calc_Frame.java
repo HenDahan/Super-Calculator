@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-import Calculator.Advanced_Calculator;
+import Utility.Advanced_Calculator;
 
 
 
@@ -51,7 +51,7 @@ public class Advanced_Calc_Frame {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 510, 374);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.CENTER);

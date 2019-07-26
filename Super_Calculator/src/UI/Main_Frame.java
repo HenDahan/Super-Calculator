@@ -26,7 +26,7 @@ public class Main_Frame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(String args[]) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -51,7 +51,7 @@ public class Main_Frame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 500, 440);
+		frame.setBounds(100, 100, 500, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -104,7 +104,7 @@ public class Main_Frame {
 		btnFunctionCalculator.setBounds(10, 230, 200, 50);
 		panel.add(btnFunctionCalculator);
 		
-		JButton btnFibonacciSeries = new JButton("Fibonacci Series");
+		JButton btnFibonacciSeries = new JButton("Fibonacci Sequence");
 		btnFibonacciSeries.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fibonacci_Series_Frame.Fib_Frame();
