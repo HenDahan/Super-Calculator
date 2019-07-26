@@ -49,6 +49,8 @@ public class Base_Calculator_Frame {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setTitle("Base Calculator");
+
 		
 		JLabel lblSelectTheBase = new JLabel("Select the Base of the Number");
 		lblSelectTheBase.setBounds(12, 10, 280, 15);

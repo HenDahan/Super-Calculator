@@ -50,6 +50,8 @@ public class Fibonacci_Series_Frame {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 630, 260);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setTitle("Fibonacci Sequence Calculator");
+
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.CENTER);

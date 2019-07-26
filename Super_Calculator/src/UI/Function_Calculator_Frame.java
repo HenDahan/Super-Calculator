@@ -56,6 +56,8 @@ public class Function_Calculator_Frame {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 600, 610);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setTitle("Function Calculator");
+
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.CENTER);

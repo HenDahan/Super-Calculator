@@ -50,7 +50,8 @@ public class Prime_Factorization {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 206);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		
+		frame.setTitle("Prime Factorization Calculator");
+
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
