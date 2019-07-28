@@ -10,8 +10,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
 import Utility.Advanced_Calculator;
-
-
+import Utility.Basic_Calculator;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -187,7 +186,7 @@ public class Advanced_Calc_Frame {
 		equal_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String t = in_textField.getText();
-				String temp = Advanced_Calculator.Advanced(t);
+				String temp = Basic_Calculator.Previous_parentheses(t);
 				out_textPane.setText(temp);
 				in_textField.setText("");
 			}
@@ -303,7 +302,7 @@ public class Advanced_Calc_Frame {
 				String t = in_textField.getText();
 				in_textField.setText(t + " ! ");
 				String t2 = in_textField.getText();
-				String temp = Advanced_Calculator.Advanced(t2);
+				String temp = Basic_Calculator.Previous_parentheses(t2);
 				out_textPane.setText(temp);
 				in_textField.setText("");
 			}
@@ -352,7 +351,7 @@ public class Advanced_Calc_Frame {
 				 
 				in_textField.setText(buffer+" root ( "+t1[t1.length-1]+" )");
 				String t2 = in_textField.getText();
-				String temp = Advanced_Calculator.Advanced(t2);
+				String temp = Basic_Calculator.Root(t2);
 				out_textPane.setText(temp);
 				in_textField.setText("");
 				

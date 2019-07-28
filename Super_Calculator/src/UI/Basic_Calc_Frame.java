@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-import Utility.GFG;
+import Utility.Basic_Calculator;
 
 public class Basic_Calc_Frame {
 
@@ -175,7 +175,7 @@ public class Basic_Calc_Frame {
 		equal_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String t = in_textField.getText();
-				String temp = GFG.infixToPrefix(t);
+				String temp = Basic_Calculator.Previous_parentheses(t);
 				out_textPane.setText(temp);
 				in_textField.setText("");
 			}
